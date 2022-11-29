@@ -3,7 +3,7 @@
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *ptr, *new, *temp;
-	if (head == NULL)
+	if (*head == NULL)
 		return (NULL);
 
 	ptr = *head;
