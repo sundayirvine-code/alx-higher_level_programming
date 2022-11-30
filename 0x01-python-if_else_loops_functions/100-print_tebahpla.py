@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-i=122
-j=90
-flag=0
+i = 122
+j = 90
+flag = 0
 
-while(i>=97 and j>=65):
+while(i >= 97 and j >= 65):
     if flag == 0:
         print("{}".format(chr(i)), end='')
 
@@ -17,4 +17,3 @@ while(i>=97 and j>=65):
         flag = 1
     else:
         flag = 0
-
