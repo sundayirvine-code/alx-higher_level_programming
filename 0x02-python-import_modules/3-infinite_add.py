@@ -6,7 +6,7 @@ def inf_add():
         print("{}".format(0))
     else:
         add=0
-        for i in range(l + 1):
+        for i in range(l+1):
             if i != 0:
                 add += int(sys.argv[i])
         print("{}".format(add))
