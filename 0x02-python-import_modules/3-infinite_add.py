@@ -10,5 +10,5 @@ def inf_add():
             if i != 0:
                 add += int(sys.argv[i])
         print("{}".format(add))
- if __name__ == "__main__":
+if __name__ == "__main__":
     inf_add()
