@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    l = len(roman_string)
+    l = len(roman_string) + 1
     numeral = 0
     for i in range(l):
         try:
