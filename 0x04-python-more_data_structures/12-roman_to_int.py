@@ -27,25 +27,19 @@ def roman_to_int(roman_string):
             else:
                 if curr == 'I':
                     numeral += 1
-                    i += 1
                 elif curr == 'V':
                     numeral += 5
-                    i += 1
                 elif curr == 'X':
                     numeral += 10
-                    i += 1
                 elif curr == 'L':
                     numeral += 50
-                    i += 1
                 elif curr == 'C':
                     numeral += 100
-                    i += 1
                 elif curr == 'D':
                     numeral += 500
-                    i += 1
                 elif curr == 'M':
                     numeral += 1000
-                    i += 1
+                i += 1
         except IndexError:
             if l == 1:
                 curr = roman_string[0]
