@@ -48,16 +48,16 @@ def roman_to_int(roman_string):
                 if curr == 'I':
                     return 1
                 elif curr == 'V':
-                    return = 5
+                    return 5
                 elif curr == 'X':
-                    return = 10
+                    return 10
                 elif curr == 'L':
-                    return = 50
+                    return 50
                 elif curr == 'C':
-                    return = 100
+                    return 100
                 elif curr == 'D':
-                    return = 500
+                    return 500
                 elif curr == 'M':
-                    return = 1000
+                    return 1000
             
             return numeral
