@@ -3,7 +3,7 @@ def roman_to_int(roman_string):
     l = len(roman_string)
     numeral = 0
     i = 0
-    while i <= l + 1:
+    while i <= l:
         try:
             curr = roman_string[i]
             nex = roman_string[i + 1]
@@ -26,6 +26,7 @@ def roman_to_int(roman_string):
                 numeral += 900
                 i += 2
             else:
+                print(curr)
                 if curr == 'I':
                     numeral += 1
                 elif curr == 'V':
