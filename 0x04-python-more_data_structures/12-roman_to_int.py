@@ -2,7 +2,8 @@
 def roman_to_int(roman_string):
     l = len(roman_string) + 1
     numeral = 0
-    for i in range(l):
+    i = 0
+    while i < l:
         try:
             curr = roman_string[i]
             nex = roman_string[i + 1]
@@ -40,6 +41,7 @@ def roman_to_int(roman_string):
                     numeral += 500
                 elif curr == 'M':
                     numeral += 1000
+                i += 1
         except IndexError:
             if l == 1:
                 curr = roman_string[0]
