@@ -40,7 +40,6 @@ def roman_to_int(roman_string):
                     numeral += 500
                 elif curr == 'M':
                     numeral += 1000
-                i += 1
         except IndexError:
             if l == 1:
                 curr = roman_string[0]
