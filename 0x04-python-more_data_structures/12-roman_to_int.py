@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    l = len(roman_string) + 1
+    l = len(roman_string)
     numeral = 0
     i = 0
     while i < l:
@@ -44,6 +44,8 @@ def roman_to_int(roman_string):
                     numeral = 1000
                 return numeral
             else:
+                numeral = 0
+                l = len(roman_string)
                 i = 0
                 while i < l:
                     print(curr)
