@@ -25,23 +25,6 @@ def roman_to_int(roman_string):
             elif curr == 'C' and nex == 'M':
                 numeral += 900
                 i += 2
-            else:
-                print(curr)
-                if curr == 'I':
-                    numeral += 1
-                elif curr == 'V':
-                    numeral += 5
-                elif curr == 'X':
-                    numeral += 10
-                elif curr == 'L':
-                    numeral += 50
-                elif curr == 'C':
-                    numeral += 100
-                elif curr == 'D':
-                    numeral += 500
-                elif curr == 'M':
-                    numeral += 1000
-                i += 1
         except IndexError:
             if l == 1:
                 curr = roman_string[0]
@@ -59,4 +42,24 @@ def roman_to_int(roman_string):
                     numeral = 500
                 elif curr == 'M':
                     numeral = 1000
-            return numeral
+                return numeral
+            else:
+                i = 0
+                while i < l:
+                    print(curr)
+                    if curr == 'I':
+                        numeral += 1
+                    elif curr == 'V':
+                        numeral += 5
+                    elif curr == 'X':
+                        numeral += 10
+                    elif curr == 'L':
+                        numeral += 50
+                    elif curr == 'C':
+                        numeral += 100
+                    elif curr == 'D':
+                        numeral += 500
+                    elif curr == 'M':
+                        numeral += 1000
+                    i += 1
+                return numeral
