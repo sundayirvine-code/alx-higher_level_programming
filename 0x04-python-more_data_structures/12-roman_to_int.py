@@ -1,63 +1,13 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    l = len(roman_string) + 1
-    numeral = 0
-    i = 0
-    while i < l:
-        try:
-            curr = roman_string[i]
-            nex = roman_string[i + 1]
-            if curr == 'I' and nex == 'V':
-                numeral += 4
-                i += 2
-            elif curr == 'I' and nex == 'X':
-                numeral += 9
-                i += 2
-            elif curr == 'X' and nex == 'L':
-                numeral += 40
-                i += 2
-            elif curr == 'X' and nex == 'C':
-                numeral += 90
-                i += 2
-            elif curr == 'C' and nex == 'D':
-                numeral += 400
-                i += 2
-            elif curr == 'C' and nex == 'M':
-                numeral += 900
-                i += 2
-            else:
-                print(curr)
-                if curr == 'I':
-                    numeral += 1
-                elif curr == 'V':
-                    numeral += 5
-                elif curr == 'X':
-                    numeral += 10
-                elif curr == 'L':
-                    numeral += 50
-                elif curr == 'C':
-                    numeral += 100
-                elif curr == 'D':
-                    numeral += 500
-                elif curr == 'M':
-                    numeral += 1000
-                i += 1
-        except IndexError:
-            if l == 1:
-                curr = roman_string[0]
-                if curr == 'I':
-                    return 1
-                elif curr == 'V':
-                    return 5
-                elif curr == 'X':
-                    return 10
-                elif curr == 'L':
-                    return 50
-                elif curr == 'C':
-                    return 100
-                elif curr == 'D':
-                    return 500
-                elif curr == 'M':
-                    return 1000
-            else:
-                return numeral
+    if not roman_string or type(roman_string) != str:
+        return 0
+    roman_d = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    roman_n = 0
+    for j in range(len(roman_string)):
+        if j > 0 and roman_d[roman_string[j]] > roman_d[roman_string[j - 1]]:
+            roman_n += roman_d[roman_string[j]] - 2 * \
+                        roman_d[roman_string[j - 1]]
+        else:
+            roman_n += roman_d[roman_string[j]]
+    return roman_n
