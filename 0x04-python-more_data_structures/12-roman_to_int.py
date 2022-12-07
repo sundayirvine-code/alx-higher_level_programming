@@ -59,3 +59,5 @@ def roman_to_int(roman_string):
                     return 500
                 elif curr == 'M':
                     return 1000
+            else:
+                return numeral
