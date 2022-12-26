@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+"""a function that adds 2 integers."""
+def add_integer(a, b=98):
+    try:
+        a = int(a)
+    except:
+        raise TypeError('a must be an integer')
+    try:
+        b = int(b)
+    except:
+        raise TypeError('b must be an integer')
+    else:
+        return a + b
+if __name__ == "__main__":
+        import doctest
+        doctest.testmod()
+
+"""
+>>> print(add_integer(1, 2))
+3
+>>> print(add_integer(100, -2)
+98
+>>> print(add_integer(2))
+100
+>>> print(add_integer(100.3, -2))
+98
+"""
