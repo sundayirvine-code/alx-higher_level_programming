@@ -15,6 +15,7 @@ def text_indentation(text):
     temp = ''
     for i in text:
         if i == '.' or i == '?' or i == ':':
+            temp += i
             temp.strip()
             print(temp)
             print()
