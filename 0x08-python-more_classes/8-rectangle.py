@@ -3,12 +3,12 @@
 class Rectangle:
     """ A Rectangle class with getter and setter methods"""
 
-    number_of_instances = 0
-    print_symbol = "#"
+    number_of_instances=0
+    print_symbol="#"
 
-    def __init__(self, width = 0, height = 0):
-        self.width = width
-        self.height = height
+    def __init__(self, width=0, height=0):
+        self.width=width
+        self.height=height
 
         Rectangle.number_of_instances += 1
 
@@ -22,7 +22,7 @@ class Rectangle:
             raise TypeError('width must be an integer')
         if width < 0:
             raise ValueError('width must be >= 0')
-        self.__width = width
+        self.__width=width
 
     @property
     def height(self):
@@ -34,7 +34,7 @@ class Rectangle:
             raise TypeError('height must be an integer')
         if height < 0:
             raise ValueError('height must be >= 0')
-        self.__height = height
+        self.__height=height
 
     def area(self):
         """Returns rectangle area"""
