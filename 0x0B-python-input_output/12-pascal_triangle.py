@@ -31,7 +31,7 @@ def pascal_triangle(n):
       while nex < len(triangle_list[j]):
         s = triangle_list[j][cur] + triangle_list[j][nex]
         temp.append(s)
-        curr += 1
+        cur += 1
         nex += 1
       temp.append(1)
       triangle_list.append(temp)
