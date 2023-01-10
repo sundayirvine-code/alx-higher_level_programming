@@ -6,7 +6,7 @@ def pascal_triangle(n):
   '''
   solve tiangle
   '''
-  trangle_list = []
+  triangle_list = []
   
   for i in range(n):
     if n <= 0:
