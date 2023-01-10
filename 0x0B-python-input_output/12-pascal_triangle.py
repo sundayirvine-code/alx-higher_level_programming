@@ -6,12 +6,12 @@ def pascal_triangle(n):
   '''
   solve tiangle
   '''
+  if n <= 0:
+      return []
+      
   triangle_list = []
   
-  for i in range(n):
-    if n <= 0:
-      return []
-    
+  for i in range(n): 
     temp = []
     if i == 0:
       temp.append(1)
