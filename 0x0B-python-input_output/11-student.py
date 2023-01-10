@@ -31,7 +31,9 @@ class Student:
             return {k: v for k, v in self.__dict__.items() if k in attrs}
 
         def reload_from_json(self, json):
-    """This function replaces all attributes of the Student instance with the given json dictionary data
-    """
-    self.__dict__.update(json)
-
+        """Replace all attributes of the Student.
+        Args:
+            json (dict): The key/value pairs to replace attributes with.
+        """
+        for k, v in json.items():
+            setattr(self, k, v)
