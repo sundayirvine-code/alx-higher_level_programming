@@ -29,7 +29,7 @@ def pascal_triangle(n):
       cur = 0
       nex = 1
       while nex < len(triangle_list[j]):
-        s = triangle_list[j][curr] + triangle_list[j][nex]
+        s = triangle_list[j][cur] + triangle_list[j][nex]
         temp.append(s)
         curr += 1
         nex += 1
