@@ -6,5 +6,6 @@
 USE hbtn_0d_usa;
 SELECT cities.id, cities.name, states.name
 FROM cities
-FULL OUTER JOIN states
-ORDER BY cities.id
+INNER JOIN states
+ON states.id = cities.states_id
+ORDER BY cities.id;
