@@ -1,9 +1,7 @@
 #!/usr/bin/node
 
-const arg = process.argv[2];
+const lines = ["C is fun", "Python is cool", "JavaScript is amazing"];
 
-if (!isNaN(arg) && Number.isInteger(Number(arg))) {
-  console.log(`My number: ${parseInt(arg)}`);
-} else {
-  console.log("Not a number");
+for (const line of lines) {
+  console.log(line);
 }
