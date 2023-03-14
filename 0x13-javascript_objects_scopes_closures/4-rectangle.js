@@ -1,31 +1,36 @@
 #!/usr/bin/node
+// class Rectangle that defines a rectangle
 
 class Rectangle {
-    constructor(w, h) {
-      if (w > 0 && h > 0) {
-        this.width = w;
-        this.height = h;
-      } else {
-        // Create an empty object if w or h is not a positive integer
-        Object.create(null);
-      }
-    }
-  
-    print() {
-      for (let i = 0; i < this.height; i++) {
-        console.log('X'.repeat(this.width));
-      }
-    }
-  
-    rotate() {
-      [this.width, this.height] = [this.height, this.width];
-    }
-  
-    double() {
-      this.width *= 2;
-      this.height *= 2;
+  constructor (w, h) {
+    if (w > 0 && h > 0) {
+      this.width = w;
+      this.height = h;
     }
   }
-  
-  module.exports = Rectangle;
-  
+
+  print () {
+    let i, j, string;
+    for (i = 0; i < this.height; i++) {
+      string = '';
+      for (j = 0; j < this.width; j++) {
+        string += 'X';
+      }
+      console.log(string);
+    }
+  }
+
+  rotate () {
+    let temp;
+    temp = this.height;
+    this.height = this.width;
+    this.width = temp;
+  }
+
+  double () {
+    this.height *= 2;
+    this.width *= 2;
+  }
+}
+
+module.exports = Rectangle;
